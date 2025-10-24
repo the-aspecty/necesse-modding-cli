@@ -40,6 +40,14 @@ cd apps/cli
 bun link
 ```
 
+```sh
+# Alternative aliases, they point to the same cli locally(using bun link) or when installed globally with -g
+@necesse-modding/cli
+create-necesse-mod
+necesse-cli
+necesse-modding-cli 
+```
+
 Notes:
 - Use the `bun` commands above if you have Bun installed. If you're using npm: replace `bun run ...` with `npm run ...`.
 
@@ -132,6 +140,8 @@ Before opening a PR:
 # local linked CLI from apps/cli
 create-necesse-mod --interactive
 ```
+
+Notes: The alias is necessary because linked packages can't use their original names if they has scoped names (@scope)
 
 4. If including the Gradle wrapper properties, run `gradle wrapper` inside the generated project to produce `gradlew` scripts and then try `./gradlew build` (or `gradlew.bat build` on Windows).
 

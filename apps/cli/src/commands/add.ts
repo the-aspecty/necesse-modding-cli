@@ -26,7 +26,7 @@ export async function addCommand(componentType?: string) {
   } catch (error) {
     spinner.fail(red('Not in a Necesse mod directory'));
     console.log(yellow('\n💡 Tip: Navigate to your mod directory or create a new mod first:'));
-    console.log('   create-necesse-mod new MyMod\n');
+    console.log('   @necesse-modding/cli new MyMod\n');
     process.exit(1);
   }
 

@@ -1,11 +1,11 @@
 # create-necesse-mod — Generate Necesse 1.0+ mods & More
 
 ``@necesse-modding/cli``
-> alias: create-necesse-mod, necesse-cli, necesse-modding-cli
 
-Is an Interactive CLI tool to Scaffold Necesse 1.0+ mods with modern Gradle (9.1), VSCode setup, and an automatic JDK installation via gradle plugin.
+Interactive CLI tool to Scaffold Necesse 1.0+ mods with modern Gradle (9.1), VSCode setup, and an automatic JDK installation via gradle plugin.
 
 Allows adding items, mobs, tiles, and buffs & more to existing mods via CLI commands.
+>More features coming soon!
 
 ## Summary
 
@@ -31,23 +31,15 @@ Jump to a section:
 
 ```bash
 # Using npx (no installation required)
-npx create-necesse-mod
+npx @necesse-modding/cli@latest
 
 # Or install globally
-npm install -g create-necesse-mod
-create-necesse-mod --interactive
+npm install -g @necesse-modding/cli
+@necesse-modding/cli --interactive
 
 # Using Bun (Recommended)
-bunx create-necesse-mod
+bunx @necesse-modding/cli
 ```
-
-```sh
-# Alternative aliases, they point to the same cli
-npx @necesse-modding/cli
-npx necesse-cli
-npx necesse-modding-cli 
-```
-
 
 ## Features
 
@@ -163,19 +155,19 @@ Add a Short link to CHANGELOG.md or a small bullet of notable changes per releas
 
 ### Interactive Mode (Recommended)
 ```bash
-create-necesse-mod --interactive
+@necesse-modding/cli --interactive
 # or short form
 cnm -i
 ```
 
 ### Quick Create
 ```bash
-create-necesse-mod "MyAwesomeMod"
+@necesse-modding/cli "MyAwesomeMod"
 ```
 
 ### With Options
 ```bash
-create-necesse-mod "MyMod" \
+@necesse-modding/cli "MyMod" \
   --author "YourName" \
   --description "An awesome mod" \
   --mod-id "mymod" \
@@ -189,7 +181,7 @@ create-necesse-mod "MyMod" \
 - `add` - Add components to existing mod (items, mobs, tiles, buffs)
 
 ### Available Options
-Note: `new` is the default command. Running `create-necesse-mod` with no subcommand will run the `new` flow.
+Note: `new` is the default command. Running `@necesse-modding/cli` with no subcommand will run the `new` flow.
 
 `new` command options:
 
@@ -213,7 +205,7 @@ Interactive-only prompts (shown when using `--interactive` or when omitting requ
 
 `add` command:
 
-Usage: `create-necesse-mod add [type]`
+Usage: `@necesse-modding/cli add [type]`
 
 - `type` (positional, optional): `item`, `mob`, `tile`, or `buff`. If omitted, the CLI will prompt you to choose.
 - After choosing a type the command runs interactive prompts to collect details for the new component (name, stats, rarity, etc.). There are no dedicated long-form CLI flags for `add` at this time — use the interactive flow or pass the positional type.

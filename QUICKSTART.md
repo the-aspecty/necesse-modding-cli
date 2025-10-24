@@ -4,22 +4,22 @@
 
 ### Install globally
 ```bash
-npm install -g create-necesse-mod
+npm install -g @necesse-modding/cli
 ```
 
 ### Use with npx (no installation)
 ```bash
-npx create-necesse-mod
+npx @necesse-modding/cli
 ```
 
 ### Interactive mode
 ```bash
-create-necesse-mod --interactive
+@necesse-modding/cli --interactive
 ```
 
 ### Quick create
 ```bash
-create-necesse-mod "MyAwesomeMod" --author "YourName"
+@necesse-modding/cli "MyAwesomeMod" --author "YourName"
 ```
 
 ## For Developers
@@ -48,6 +48,8 @@ cd apps/cli
 bun link
 create-necesse-mod --interactive
 ```
+
+Notes: The alias is necessary because linked packages can't use their original names if they has scoped names (@scope)
 
 ## Templates Available
 

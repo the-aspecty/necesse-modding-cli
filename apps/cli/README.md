@@ -1,4 +1,4 @@
-# create-necesse-mod
+# @necesse-modding/cli
 
 🎮 CLI tool to quickly generate Necesse mod templates with best practices and VSCode support.
 
@@ -6,29 +6,29 @@
 
 ### Global Installation (Recommended)
 ```bash
-npm install -g create-necesse-mod
+npm install -g @necesse-modding/cli
 ```
 
 ### Using npx (No Installation)
 ```bash
-npx create-necesse-mod
+npx @necesse-modding/cli
 ```
 
 ## Usage
 
 ### Interactive Mode (Recommended)
 ```bash
-create-necesse-mod --interactive
+@necesse-modding/cli --interactive
 ```
 
 ### Quick Start
 ```bash
-create-necesse-mod "My Awesome Mod"
+@necesse-modding/cli "My Awesome Mod"
 ```
 
 ### With Options
 ```bash
-create-necesse-mod "My Mod" \
+@necesse-modding/cli "My Mod" \
   --author "YourName" \
   --description "An awesome Necesse mod" \
   --mod-id "mymod" \

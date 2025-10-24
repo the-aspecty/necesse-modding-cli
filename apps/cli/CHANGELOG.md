@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] - 2025-10-22
 
 ### Added
-- Initial release of create-necesse-mod CLI
+- Initial release of @necesse-modding/cli (create-necesse-mod)
 - Interactive mode for guided mod creation
 - Four templates: Basic, Item, QOL, and Empty
 - VSCode configuration generation
