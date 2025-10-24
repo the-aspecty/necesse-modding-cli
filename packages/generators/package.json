@@ -1,0 +1,11 @@
+{
+  "name": "@necesse-modding/generators",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "main": "./src/index.ts",
+  "dependencies": {
+    "@necesse-modding/types": "workspace:*",
+    "@necesse-modding/utils": "workspace:*"
+  }
+}
