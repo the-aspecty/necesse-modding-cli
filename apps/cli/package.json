@@ -3,6 +3,9 @@
   "version": "0.9.0",
   "description": "CLI tool to quickly generate Necesse mod templates with best practices and VSCode support",
   "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
   "bin": {
     "create-necesse-mod": "./dist/index.js",
     "@necesse-modding/cli": "./dist/index.js",
