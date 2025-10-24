@@ -1,0 +1,63 @@
+{
+  "name": "@necesse-modding/cli",
+  "version": "0.9.0",
+  "description": "CLI tool to quickly generate Necesse mod templates with best practices and VSCode support",
+  "type": "module",
+  "bin": {
+    "create-necesse-mod": "./dist/index.js",
+    "@necesse-modding/cli": "./dist/index.js",
+    "necesse-cli": "./dist/index.js",
+    "necesse-modding-cli": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "dev": "bun run --watch ./src/index.ts",
+    "build": "bun build ./src/index.ts --outdir ./dist --target node --format esm --minify --sourcemap=external",
+    "prepublishOnly": "bun run build",
+    "lint": "biome check .",
+    "format": "biome format --write ."
+  },
+  "keywords": [
+    "necesse",
+    "mod",
+    "cli",
+    "generator",
+    "template",
+    "game",
+    "modding"
+  ],
+  "author": "YourName",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/the-aspecty/necesse-modding-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/the-aspecty/necesse-modding-cli/issues"
+  },
+  "homepage": "https://github.com/the-aspecty/necesse-modding-cli#readme",
+  "dependencies": {
+    "colorette": "^2.0.20",
+    "commander": "^12.1.0",
+    "inquirer": "^12.2.0",
+    "ora": "^8.1.1",
+    "@necesse-modding/core": "workspace:*",
+    "@necesse-modding/generators": "workspace:*",
+    "@necesse-modding/templates": "workspace:*",
+    "@necesse-modding/types": "workspace:*",
+    "@necesse-modding/utils": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/commander": "^2.12.5",
+    "@types/inquirer": "^9.0.9",
+    "@types/node": "^22.9.0",
+    "typescript": "^5.6.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
