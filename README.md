@@ -156,8 +156,6 @@ Add a Short link to CHANGELOG.md or a small bullet of notable changes per releas
 ### Interactive Mode (Recommended)
 ```bash
 @necesse-modding/cli --interactive
-# or short form
-cnm -i
 ```
 
 ### Quick Create
