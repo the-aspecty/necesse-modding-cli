@@ -312,3 +312,10 @@ If you'd like to support development of the tool and mods. Thank you!
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/N4N216DNEL)
 
+<!-- ## More mods and tools by Aspecty:
+- [wip] -->
+
+## Roadmap
+- [ ] More component generators (structures, quests, etc.)
+- [ ] Recipe generator with id lists
+- [ ] Locale Helper Tool
