@@ -292,7 +292,7 @@ MIT
 ## Getting Help
 
 - 🐛 [Report Issues](https://github.com/yourusername/necesse-cli/issues)
-- 🎮 [Necesse Modding Discord](https://discord.gg/necesse)
+- 🎮 [Necesse Modding Discord](https://discord.gg/7W3cHpkK)
 
 ## Sponsor / Support
 
