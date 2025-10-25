@@ -11,7 +11,7 @@ import {
   type MobGeneratorOptions,
   type BuffGeneratorOptions,
   type TileGeneratorOptions,
-} from '@necesse-modding/generators';
+} from '@necesse-modding/core';
 
 export async function addCommand(componentType?: string) {
   console.log(bold(cyan('\n➕ Add Component to Mod\n')));

@@ -59,3 +59,8 @@ async function generateFiles(projectPath: string, config: ModConfig): Promise<vo
     await fs.writeFile(fullPath, content, 'utf-8');
   }
 }
+
+// Export templating engine
+export * from './templating-engine.js';
+// Re-export generators so other packages can import generators directly from the core package
+export * from './generators/index.js';

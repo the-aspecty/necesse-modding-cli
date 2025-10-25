@@ -49,9 +49,8 @@
     "commander": "^12.1.0",
     "inquirer": "^12.2.0",
     "ora": "^8.1.1",
-    "@necesse-modding/core": "workspace:*",
-    "@necesse-modding/generators": "workspace:*",
-    "@necesse-modding/templates": "workspace:*",
+  "@necesse-modding/core": "workspace:*",
+  "@necesse-modding/templates": "workspace:*",
     "@necesse-modding/utils": "workspace:*"
   },
   "devDependencies": {

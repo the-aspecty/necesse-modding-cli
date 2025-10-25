@@ -14,7 +14,7 @@ This package provides generators for creating Necesse mod components programmati
 The generators are used internally by the CLI's `add` command, but can also be used programmatically:
 
 ```typescript
-import { ItemGenerator } from '@necesse-modding/generators';
+import { ItemGenerator } from '@necesse-modding/core/generators';
 import { getModContext } from '@necesse-modding/utils';
 
 const context = await getModContext();
