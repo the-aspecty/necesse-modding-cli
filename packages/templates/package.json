@@ -5,7 +5,9 @@
   "type": "module",
   "main": "./src/index.ts",
   "dependencies": {
-    "@necesse-modding/utils": "workspace:*",
+    "@necesse-modding/utils": "workspace:*"
+  },
+  "devDependencies": {
     "@necesse-modding/types": "workspace:*"
   }
 }

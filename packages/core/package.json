@@ -5,8 +5,11 @@
   "type": "module",
   "main": "./src/index.ts",
   "dependencies": {
-    "@necesse-modding/types":"workspace:*",
-    "@necesse-modding/templates":"workspace:*",
-    "@necesse-modding/utils":"workspace:*"
+    "@necesse-modding/templates": "workspace:*",
+    "@necesse-modding/utils": "workspace:*",
+    "handlebars": "^4.7.8"
+  },
+  "devDependencies": {
+    "@necesse-modding/types": "workspace:*"
   }
 }

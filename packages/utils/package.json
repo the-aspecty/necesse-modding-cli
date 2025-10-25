@@ -4,7 +4,8 @@
     "private": false,
     "type": "module",
     "main": "./src/index.ts",
-    "dependencies": {
+    "dependencies": {},
+    "devDependencies": {
         "@necesse-modding/types": "workspace:*"
     }
 }

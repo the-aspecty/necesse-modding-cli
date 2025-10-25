@@ -52,14 +52,14 @@
     "@necesse-modding/core": "workspace:*",
     "@necesse-modding/generators": "workspace:*",
     "@necesse-modding/templates": "workspace:*",
-    "@necesse-modding/types": "workspace:*",
     "@necesse-modding/utils": "workspace:*"
   },
   "devDependencies": {
     "@types/commander": "^2.12.5",
     "@types/inquirer": "^9.0.9",
     "@types/node": "^22.9.0",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.3",
+    "@necesse-modding/types": "workspace:*"
   },
   "engines": {
     "node": ">=18.0.0"
