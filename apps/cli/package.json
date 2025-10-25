@@ -1,6 +1,6 @@
 {
   "name": "@necesse-modding/cli",
-  "version": "0.9.1",
+  "version": "0.9.3",
   "description": "CLI tool to quickly generate Necesse mod templates with best practices and VSCode support",
   "type": "module",
   "publishConfig": {

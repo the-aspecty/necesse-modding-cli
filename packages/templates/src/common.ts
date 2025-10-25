@@ -73,6 +73,9 @@ java {
 tasks.withType(JavaCompile).configureEach {
     // If toolchain is used, this will instruct javac to output class files for Java 8
     options.release.set(8)
+    options.encoding = "UTF-8"
+    // Suppress warnings about obsolete Java 8 source/target options (until necesse devs decide to update the java version)
+    options.compilerArgs += ["-Xlint:-options"]
 }
 
 repositories {
@@ -83,12 +86,21 @@ configurations {
     libDepends
 }
 
-sourceSets.main.java.destinationDirectory.set(new File(modOutputDir, "classes"))
-sourceSets.main.output.resourcesDir = new File(modOutputDir, "resources")
-sourceSets.main.compileClasspath += configurations.libDepends // Adds libDepends configuration to classpath
-def buildLocation = "build/jar/"
+// FIXED: Updated syntax for Gradle 9.1.0
+sourceSets {
+    main {
+        java {
+            destinationDirectory.set(new File(modOutputDir, "classes"))
+        }
+       
+        output.resourcesDir = new File(modOutputDir, "resources")
+       
+        // Adds libDepends configuration to classpath
+        compileClasspath += configurations.libDepends
+    }
+}
 
-compileJava.options.encoding = "UTF-8"
+def buildLocation = "build/jar/"
 
 if (!file(gameDirectory + "/Necesse.jar").exists()) {
     throw new Exception("Could not find game install directory. Make sure it is correct in build.gradle file.")
@@ -136,7 +148,9 @@ task createModInfoFile(type: JavaExec) {
             "-optionalDependencies", project.ext.has("modOptionalDependencies") ? "[" + project.ext.modOptionalDependencies.join(", ") + "]" : ""]
 }
 // Makes compiling also create mod info file
-classes.dependsOn("createModInfoFile")
+tasks.named('classes') {
+    dependsOn("createModInfoFile")
+}
 
 task runClient(type: JavaExec) {
     group = "necesse"
@@ -185,7 +199,10 @@ task buildModJar(type: Jar) {
 
   // Add compiled classes and generated resources
   from sourceSets.main.java.destinationDirectory.get()
-  from sourceSets.main.output.resourcesDir
+  // Add resources under 'resources/' prefix in JAR
+  from(sourceSets.main.output.resourcesDir) {
+    into 'resources'
+  }
   // Add the dependencies
   from configurations.libDepends.collect { it.isDirectory() ? it : zipTree(it) }
 
@@ -255,7 +272,8 @@ Thumbs.db
           {
             label: 'Build Mod Jar',
             type: 'shell',
-            command: os.platform() === 'win32' ? '.\\gradlew.bat buildModJar' : './gradlew buildModJar',
+            command:
+              os.platform() === 'win32' ? '.\\gradlew.bat buildModJar' : './gradlew buildModJar',
             group: { kind: 'build', isDefault: true },
           },
           {
@@ -268,7 +286,8 @@ Thumbs.db
           {
             label: 'Run Dev Client',
             type: 'shell',
-            command: os.platform() === 'win32' ? '.\\gradlew.bat runDevClient' : './gradlew runDevClient',
+            command:
+              os.platform() === 'win32' ? '.\\gradlew.bat runDevClient' : './gradlew runDevClient',
             group: 'none',
           },
         ],
