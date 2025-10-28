@@ -44,7 +44,7 @@ npx @necesse-modding/cli
 | `--description <desc>` | `-d` | Mod description |
 | `--mod-id <id>` | `-m` | Mod ID (lowercase) |
 | `--game-dir <path>` | `-g` | Path to the Necesse game directory |
-| `--game-version <version>` | | Target Necesse game version (default: `1.0.1`) |
+| `--game-version <version>` | | Target Necesse game version (default: `1.0.2`) |
 | `--mod-version <version>` | | Mod version (default: `1.0.0`) |
 | `--clientside` | `-c` | Mark mod as client-side only |
 | `--output <dir>` | `-o` | Output directory |
